@@ -5,7 +5,7 @@ pipeline {
         //     steps {
         //         checkout ([$class: 'GitSCM',
         //         branches: [[name: '*/main']],
-        //         userRemoteConfigs: [[url: 'https://github.com/chantelledmonte/PES2UG21CS139_Jenkins.git']]])
+        //         userRemoteConfigs: [[url: *https://github.com/chantelledmonte/PES2UG21CS139_Jenkins.git']]])
         
         //     }
         // }
@@ -21,8 +21,8 @@ pipeline {
             }
         }
         stage( 'Deploy') {
-            stps {
-                ech 'deploy'
+            steps {
+                echo 'deploy'
             }
         }
     }
