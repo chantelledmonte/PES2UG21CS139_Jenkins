@@ -10,7 +10,7 @@ pipeline {
         //     }
         // }
         stage('Build') {
-            stps {
+            steps {
                 build 'PES2UG21CS139-1'
                 sh 'g++ main.cpp -o output'
             }
@@ -21,8 +21,8 @@ pipeline {
             }
         }
         stage( 'Deploy') {
-            steps {
-                echo 'deploy'
+            stps {
+                ech 'deploy'
             }
         }
     }
